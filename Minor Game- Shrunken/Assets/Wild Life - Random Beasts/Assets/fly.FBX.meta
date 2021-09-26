@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 4bad97add5aff6c45a20b5aebbe3e405
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: fly
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: FlyAntena_L1
+  - first:
+      1: 100006
+    second: FlyAntena_L2
+  - first:
+      1: 100008
+    second: FlyAntena_R1
+  - first:
+      1: 100010
+    second: FlyAntena_R2
+  - first:
+      1: 100012
+    second: FlyHead
+  - first:
+      1: 100014
+    second: FlyHub001
+  - first:
+      1: 100016
+    second: FlyLLeg031
+  - first:
+      1: 100018
+    second: FlyLLeg032
+  - first:
+      1: 100020
+    second: FlyLLeg03Ankle
+  - first:
+      1: 100022
+    second: FlyLLeg03Collarbone
+  - first:
+      1: 100024
+    second: FlyLLeg1
+  - first:
+      1: 100026
+    second: FlyLLeg1 1
+  - first:
+      1: 100028
+    second: FlyLLeg2
+  - first:
+      1: 100030
+    second: FlyLLeg2 1
+  - first:
+      1: 100032
+    second: FlyLLegAnkle
+  - first:
+      1: 100034
+    second: FlyLLegAnkle 1
+  - first:
+      1: 100036
+    second: FlyLLegCollarbone
+  - first:
+      1: 100038
+    second: FlyLLegCollarbone 1
+  - first:
+      1: 100040
+    second: FlyNeck
+  - first:
+      1: 100042
+    second: FlyRLeg031
+  - first:
+      1: 100044
+    second: FlyRLeg032
+  - first:
+      1: 100046
+    second: FlyRLeg03Ankle
+  - first:
+      1: 100048
+    second: FlyRLeg03Collarbone
+  - first:
+      1: 100050
+    second: FlyRLeg1
+  - first:
+      1: 100052
+    second: FlyRLeg1 1
+  - first:
+      1: 100054
+    second: FlyRLeg2
+  - first:
+      1: 100056
+    second: FlyRLeg2 1
+  - first:
+      1: 100058
+    second: FlyRLegAnkle
+  - first:
+      1: 100060
+    second: FlyRLegAnkle 1
+  - first:
+      1: 100062
+    second: FlyRLegCollarbone
+  - first:
+      1: 100064
+    second: FlyRLegCollarbone 1
+  - first:
+      1: 100066
+    second: FlyTail1
+  - first:
+      1: 100068
+    second: FlyTail2
+  - first:
+      1: 100070
+    second: FlyWing_L1
+  - first:
+      1: 100072
+    second: FlyWing_L2
+  - first:
+      1: 100074
+    second: FlyWing_R1
+  - first:
+      1: 100076
+    second: FlyWing_R2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: fly
+  - first:
+      4: 400004
+    second: FlyAntena_L1
+  - first:
+      4: 400006
+    second: FlyAntena_L2
+  - first:
+      4: 400008
+    second: FlyAntena_R1
+  - first:
+      4: 400010
+    second: FlyAntena_R2
+  - first:
+      4: 400012
+    second: FlyHead
+  - first:
+      4: 400014
+    second: FlyHub001
+  - first:
+      4: 400016
+    second: FlyLLeg031
+  - first:
+      4: 400018
+    second: FlyLLeg032
+  - first:
+      4: 400020
+    second: FlyLLeg03Ankle
+  - first:
+      4: 400022
+    second: FlyLLeg03Collarbone
+  - first:
+      4: 400024
+    second: FlyLLeg1
+  - first:
+      4: 400026
+    second: FlyLLeg1 1
+  - first:
+      4: 400028
+    second: FlyLLeg2
+  - first:
+      4: 400030
+    second: FlyLLeg2 1
+  - first:
+      4: 400032
+    second: FlyLLegAnkle
+  - first:
+      4: 400034
+    second: FlyLLegAnkle 1
+  - first:
+      4: 400036
+    second: FlyLLegCollarbone
+  - first:
+      4: 400038
+    second: FlyLLegCollarbone 1
+  - first:
+      4: 400040
+    second: FlyNeck
+  - first:
+      4: 400042
+    second: FlyRLeg031
+  - first:
+      4: 400044
+    second: FlyRLeg032
+  - first:
+      4: 400046
+    second: FlyRLeg03Ankle
+  - first:
+      4: 400048
+    second: FlyRLeg03Collarbone
+  - first:
+      4: 400050
+    second: FlyRLeg1
+  - first:
+      4: 400052
+    second: FlyRLeg1 1
+  - first:
+      4: 400054
+    second: FlyRLeg2
+  - first:
+      4: 400056
+    second: FlyRLeg2 1
+  - first:
+      4: 400058
+    second: FlyRLegAnkle
+  - first:
+      4: 400060
+    second: FlyRLegAnkle 1
+  - first:
+      4: 400062
+    second: FlyRLegCollarbone
+  - first:
+      4: 400064
+    second: FlyRLegCollarbone 1
+  - first:
+      4: 400066
+    second: FlyTail1
+  - first:
+      4: 400068
+    second: FlyTail2
+  - first:
+      4: 400070
+    second: FlyWing_L1
+  - first:
+      4: 400072
+    second: FlyWing_L2
+  - first:
+      4: 400074
+    second: FlyWing_R1
+  - first:
+      4: 400076
+    second: FlyWing_R2
+  - first:
+      43: 4300000
+    second: fly
+  - first:
+      74: 7400000
+    second: fly
+  - first:
+      74: 7400002
+    second: idle
+  - first:
+      74: 7400004
+    second: death
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: fly
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: fly
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 30
+      lastFrame: 60
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 60
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

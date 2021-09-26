@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 31cd359a5d4a8024db3845b9e99671ef
+timeCreated: 1501856579
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bed_couette
+    100002: Bed_wood
+    100004: Bureau
+    100006: pCube115
+    100008: pCube189
+    100010: pCube190
+    100012: pCube191
+    100014: pCube192
+    100016: pCube198
+    100018: pCube199
+    100020: pCube200
+    100022: pCube201
+    100024: pCube202
+    100026: puf_01
+    100028: //RootNode
+    100030: case_01
+    100032: case_02
+    100034: case_03
+    100036: case_04
+    100038: caseBlock
+    100040: cushion
+    100042: Light_office
+    100044: Mattress
+    100046: Office
+    400000: Bed_couette
+    400002: Bed_wood
+    400004: Bureau
+    400006: pCube115
+    400008: pCube189
+    400010: pCube190
+    400012: pCube191
+    400014: pCube192
+    400016: pCube198
+    400018: pCube199
+    400020: pCube200
+    400022: pCube201
+    400024: pCube202
+    400026: puf_01
+    400028: //RootNode
+    400030: case_01
+    400032: case_02
+    400034: case_03
+    400036: case_04
+    400038: caseBlock
+    400040: cushion
+    400042: Light_office
+    400044: Mattress
+    400046: Office
+    2300000: Bed_couette
+    2300002: Bed_wood
+    2300004: Bureau
+    2300006: pCube115
+    2300008: pCube189
+    2300010: pCube190
+    2300012: pCube191
+    2300014: pCube192
+    2300016: pCube198
+    2300018: pCube199
+    2300020: pCube200
+    2300022: pCube201
+    2300024: pCube202
+    2300026: puf_01
+    2300028: case_01
+    2300030: case_02
+    2300032: case_03
+    2300034: case_04
+    2300036: caseBlock
+    2300038: cushion
+    2300040: Light_office
+    2300042: Mattress
+    2300044: Office
+    3300000: Bed_couette
+    3300002: Bed_wood
+    3300004: Bureau
+    3300006: pCube115
+    3300008: pCube189
+    3300010: pCube190
+    3300012: pCube191
+    3300014: pCube192
+    3300016: pCube198
+    3300018: pCube199
+    3300020: pCube200
+    3300022: pCube201
+    3300024: pCube202
+    3300026: puf_01
+    3300028: case_01
+    3300030: case_02
+    3300032: case_03
+    3300034: case_04
+    3300036: caseBlock
+    3300038: cushion
+    3300040: Light_office
+    3300042: Mattress
+    3300044: Office
+    4300000: Bed_couette
+    4300002: puf_01
+    4300004: pCube202
+    4300006: pCube201
+    4300008: Bed_wood
+    4300010: pCube200
+    4300012: pCube199
+    4300014: pCube198
+    4300016: pCube189
+    4300018: Bureau
+    4300020: pCube192
+    4300022: pCube191
+    4300024: pCube190
+    4300026: pCube115
+    4300028: Office
+    4300030: Light_office
+    4300032: cushion
+    4300034: Mattress
+    4300036: case_02
+    4300038: case_01
+    4300040: case_03
+    4300042: case_04
+    4300044: caseBlock
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

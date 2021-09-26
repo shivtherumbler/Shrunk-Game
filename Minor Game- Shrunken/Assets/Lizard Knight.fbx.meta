@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 61f8087ec24f1a749ae566fd54136a90
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -4794317631442833049
+    second: Armature_0|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -381140297663190672
+    second: Armature_0|Take 001_Armature_0
+  - first:
+      74: -2256170211324590543
+    second: Armature_0|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: -7299573067845615533
+    second: Armature_0|Take 001_brace_Group45393
+  - first:
+      74: -4364490532556561279
+    second: Armature_0|Take 001_bracer_Group53391
+  - first:
+      74: -2326794309354928076
+    second: Armature_0|Take 001_L_Leg_Mesh
+  - first:
+      74: 209763361384715863
+    second: Armature_0|Take 001_polySurface135
+  - first:
+      74: 8716044052555412504
+    second: Armature_0|Take 001_polySurface136
+  - first:
+      74: -3502582771674909869
+    second: Armature_0|Take 001_polySurface143
+  - first:
+      74: 8247532732808581935
+    second: Armature_0|Take 001_polySurface144
+  - first:
+      74: 2064834921464591149
+    second: Armature_0|Take 001_polySurface477
+  - first:
+      74: 3171981230160377191
+    second: Armature_0|Take 001_R_Leg_Mesh
+  - first:
+      74: 1942154370673156911
+    second: BossAfterUV_FeetClaws1|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -7925626965813646985
+    second: BossAfterUV_FeetClaws1|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: -3565647027991833681
+    second: BossAfterUV_FeetClaws1|Take 001_brace_Group45393
+  - first:
+      74: -1853478067402197288
+    second: BossAfterUV_FeetClaws1|Take 001_bracer_Group53391
+  - first:
+      74: -8185862960228394577
+    second: BossAfterUV_FeetClaws1|Take 001_L_Leg_Mesh
+  - first:
+      74: 1816506041493783606
+    second: BossAfterUV_FeetClaws1|Take 001_polySurface135
+  - first:
+      74: -804439413235063809
+    second: BossAfterUV_FeetClaws1|Take 001_polySurface136
+  - first:
+      74: -1224483190377371643
+    second: BossAfterUV_FeetClaws1|Take 001_polySurface143
+  - first:
+      74: 7993246335461664853
+    second: BossAfterUV_FeetClaws1|Take 001_polySurface144
+  - first:
+      74: 7258332739516953880
+    second: BossAfterUV_FeetClaws1|Take 001_polySurface477
+  - first:
+      74: -2998555886737874448
+    second: BossAfterUV_FeetClaws1|Take 001_R_Leg_Mesh
+  - first:
+      74: 2569836468995478427
+    second: brace_Group45393|polySurface477|Take 001|BaseLayer
+  - first:
+      74: 2951837828669389302
+    second: brace_Group45393|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: -3267626149581416169
+    second: brace_Group45393|Take 001_brace_Group45393
+  - first:
+      74: -6728301490528593633
+    second: brace_Group45393|Take 001_bracer_Group53391
+  - first:
+      74: 4378824596064721517
+    second: brace_Group45393|Take 001_L_Leg_Mesh
+  - first:
+      74: 3556798084644474216
+    second: brace_Group45393|Take 001_polySurface135
+  - first:
+      74: -5273715525740649007
+    second: brace_Group45393|Take 001_polySurface136
+  - first:
+      74: 4186124236365243043
+    second: brace_Group45393|Take 001_polySurface143
+  - first:
+      74: 7048467017339452280
+    second: brace_Group45393|Take 001_polySurface144
+  - first:
+      74: -7515432348749888536
+    second: brace_Group45393|Take 001_polySurface477
+  - first:
+      74: -5035170184040173409
+    second: brace_Group45393|Take 001_R_Leg_Mesh
+  - first:
+      74: 4859874569141318585
+    second: bracer_Group53391|polySurface477|Take 001|BaseLayer
+  - first:
+      74: 1379852167233173276
+    second: bracer_Group53391|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: 8769052194557527363
+    second: bracer_Group53391|Take 001_brace_Group45393
+  - first:
+      74: -4350446227542999458
+    second: bracer_Group53391|Take 001_bracer_Group53391
+  - first:
+      74: -5429587918118144511
+    second: bracer_Group53391|Take 001_L_Leg_Mesh
+  - first:
+      74: 2941389582415127969
+    second: bracer_Group53391|Take 001_polySurface135
+  - first:
+      74: -1518091289411777868
+    second: bracer_Group53391|Take 001_polySurface136
+  - first:
+      74: -7680152796588751817
+    second: bracer_Group53391|Take 001_polySurface143
+  - first:
+      74: 2865064184969287967
+    second: bracer_Group53391|Take 001_polySurface144
+  - first:
+      74: 5592966067067200636
+    second: bracer_Group53391|Take 001_polySurface477
+  - first:
+      74: 9205714932151937895
+    second: bracer_Group53391|Take 001_R_Leg_Mesh
+  - first:
+      74: -6737524584509596418
+    second: polySurface135|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -134587021317856868
+    second: polySurface135|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: -2072043169673399784
+    second: polySurface135|Take 001_brace_Group45393
+  - first:
+      74: -8921817971220134817
+    second: polySurface135|Take 001_bracer_Group53391
+  - first:
+      74: 6821975319062150045
+    second: polySurface135|Take 001_L_Leg_Mesh
+  - first:
+      74: -4196185935738912914
+    second: polySurface135|Take 001_polySurface135
+  - first:
+      74: -7267350048492490126
+    second: polySurface135|Take 001_polySurface136
+  - first:
+      74: 5079069234323322802
+    second: polySurface135|Take 001_polySurface143
+  - first:
+      74: 9167925122130223171
+    second: polySurface135|Take 001_polySurface144
+  - first:
+      74: -3966832773323149299
+    second: polySurface135|Take 001_polySurface477
+  - first:
+      74: 3690136412979525475
+    second: polySurface135|Take 001_R_Leg_Mesh
+  - first:
+      74: -8979883075173781022
+    second: L_Leg_Mesh|polySurface477|Take 001|BaseLayer
+  - first:
+      74: 3955723836435578380
+    second: L_Leg_Mesh|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: 350317824775201926
+    second: L_Leg_Mesh|Take 001_brace_Group45393
+  - first:
+      74: -566516187296221528
+    second: L_Leg_Mesh|Take 001_bracer_Group53391
+  - first:
+      74: 5635496665064664218
+    second: L_Leg_Mesh|Take 001_L_Leg_Mesh
+  - first:
+      74: 7930329116469274883
+    second: L_Leg_Mesh|Take 001_polySurface135
+  - first:
+      74: 1687180067800183912
+    second: L_Leg_Mesh|Take 001_polySurface136
+  - first:
+      74: -5096331196610725439
+    second: L_Leg_Mesh|Take 001_polySurface143
+  - first:
+      74: -8238530515434325722
+    second: L_Leg_Mesh|Take 001_polySurface144
+  - first:
+      74: -3675559941025159532
+    second: L_Leg_Mesh|Take 001_polySurface477
+  - first:
+      74: -2954669609354336684
+    second: L_Leg_Mesh|Take 001_R_Leg_Mesh
+  - first:
+      74: -6957109599678634411
+    second: R_Leg_Mesh|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -2825627628192004771
+    second: R_Leg_Mesh|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: 2353040678350010361
+    second: R_Leg_Mesh|Take 001_brace_Group45393
+  - first:
+      74: -7643099028428385321
+    second: R_Leg_Mesh|Take 001_bracer_Group53391
+  - first:
+      74: -8865353910874088645
+    second: R_Leg_Mesh|Take 001_L_Leg_Mesh
+  - first:
+      74: -3989213120944495082
+    second: R_Leg_Mesh|Take 001_polySurface135
+  - first:
+      74: -3051945695792394685
+    second: R_Leg_Mesh|Take 001_polySurface136
+  - first:
+      74: 5412307532234734024
+    second: R_Leg_Mesh|Take 001_polySurface143
+  - first:
+      74: 6535830394341153980
+    second: R_Leg_Mesh|Take 001_polySurface144
+  - first:
+      74: -3389247341804511985
+    second: R_Leg_Mesh|Take 001_polySurface477
+  - first:
+      74: 1001303780241455238
+    second: R_Leg_Mesh|Take 001_R_Leg_Mesh
+  - first:
+      74: -4430904914268629076
+    second: polySurface136|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -4370493445000797206
+    second: polySurface136|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: 8649211165879934277
+    second: polySurface136|Take 001_brace_Group45393
+  - first:
+      74: 7662527730731231622
+    second: polySurface136|Take 001_bracer_Group53391
+  - first:
+      74: 5840564947113670038
+    second: polySurface136|Take 001_L_Leg_Mesh
+  - first:
+      74: 779932529629249851
+    second: polySurface136|Take 001_polySurface135
+  - first:
+      74: 8437212143127166377
+    second: polySurface136|Take 001_polySurface136
+  - first:
+      74: -7682432819897776065
+    second: polySurface136|Take 001_polySurface143
+  - first:
+      74: -6524691641011198109
+    second: polySurface136|Take 001_polySurface144
+  - first:
+      74: 2017033989571111018
+    second: polySurface136|Take 001_polySurface477
+  - first:
+      74: -2809668717351424870
+    second: polySurface136|Take 001_R_Leg_Mesh
+  - first:
+      74: 1205102680586505090
+    second: polySurface143|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -8742604163181153023
+    second: polySurface143|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: -6574130753028548726
+    second: polySurface143|Take 001_brace_Group45393
+  - first:
+      74: 1145976309801753260
+    second: polySurface143|Take 001_bracer_Group53391
+  - first:
+      74: -4636819304839586672
+    second: polySurface143|Take 001_L_Leg_Mesh
+  - first:
+      74: 4157294462013246653
+    second: polySurface143|Take 001_polySurface135
+  - first:
+      74: -1552374351140101179
+    second: polySurface143|Take 001_polySurface136
+  - first:
+      74: -7689006844262342710
+    second: polySurface143|Take 001_polySurface143
+  - first:
+      74: 2641917494474158097
+    second: polySurface143|Take 001_polySurface144
+  - first:
+      74: -2438920626579895080
+    second: polySurface143|Take 001_polySurface477
+  - first:
+      74: 5644410777444697115
+    second: polySurface143|Take 001_R_Leg_Mesh
+  - first:
+      74: -4924056104414909750
+    second: polySurface144|polySurface477|Take 001|BaseLayer
+  - first:
+      74: -4288449674006172647
+    second: polySurface144|Take 001_BossAfterUV_FeetClaws1
+  - first:
+      74: 2848603749548340862
+    second: polySurface144|Take 001_brace_Group45393
+  - first:
+      74: -2552512681532599078
+    second: polySurface144|Take 001_bracer_Group53391
+  - first:
+      74: 7347857865679030092
+    second: polySurface144|Take 001_L_Leg_Mesh
+  - first:
+      74: 6455200030401622031
+    second: polySurface144|Take 001_polySurface135
+  - first:
+      74: -8859469605050200088
+    second: polySurface144|Take 001_polySurface136
+  - first:
+      74: -7479064592294183079
+    second: polySurface144|Take 001_polySurface143
+  - first:
+      74: 5805330785415515484
+    second: polySurface144|Take 001_polySurface144
+  - first:
+      74: 1438112959323045700
+    second: polySurface144|Take 001_polySurface477
+  - first:
+      74: 5901316681351456291
+    second: polySurface144|Take 001_R_Leg_Mesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Etc
+    second: {fileID: 2100000, guid: 160c9d36f67abe14fb2b37ceef6281e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sword
+    second: {fileID: 2100000, guid: 7b127971fb905ae47a36482395581382, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1.002
+    second: {fileID: 2100000, guid: 7c7e10cad24e555498a4302fe4688d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 7ba5be569fbfc6446b9fb8a0251d2b4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: e5524d6adf0b1f247accde549914d9a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: 599afe32a27905f4cb9788ed480fde5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: da110b94ea0502e468030284a1b9b02a, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 2
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
