@@ -4928,6 +4928,7 @@ MonoBehaviour:
   - {fileID: 1178234684}
   player: {fileID: 1100062731}
   move: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!320 &967691504
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6728,6 +6729,9 @@ MonoBehaviour:
   enemy: {fileID: 0}
   lockon: {fileID: 506608767}
   locktarget: {fileID: 1543742679}
+  audioSources:
+  - {fileID: 8300000, guid: 3e5eb7cc422453c4898429640f31c3e8, type: 3}
+  - {fileID: 8300000, guid: 3404d6e498d697743997f7924912df40, type: 3}
   speed: 5
   smoothTurn: 0.1
 --- !u!82 &1100062734

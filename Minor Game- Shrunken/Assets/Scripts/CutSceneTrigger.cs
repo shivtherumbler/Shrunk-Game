@@ -33,8 +33,7 @@ public class CutSceneTrigger : MonoBehaviour
         {
             Play();
             move.speed = 0;
-            companion.GetComponent<CompanionAI>().target = companion.GetComponent<CompanionAI>().objective[0];
-            companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pick up the Sword!";
+            //companion.GetComponent<CompanionAI>().target = companion.GetComponent<CompanionAI>().objective[0];
             lockon.GetComponent<CinemachineFreeLook>().m_LookAt = sword.transform;
         }
     }
@@ -60,7 +59,8 @@ public class CutSceneTrigger : MonoBehaviour
             cams[1].SetActive(false);
             move.speed = 5;
             enemy.GetComponent<EnemyAI>().enabled = true;
-            enemy.GetComponent<Animator>().SetBool("idle", false); 
+            enemy.GetComponent<Animator>().SetBool("idle", false);
+            companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pick up the Sword!";
             Destroy(gameObject, 0.2f);
         }
             

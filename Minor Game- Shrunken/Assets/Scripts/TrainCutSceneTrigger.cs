@@ -56,13 +56,15 @@ public class TrainCutSceneTrigger : MonoBehaviour
         playableDirector.stopped -= OnPlayableDirectorStopped;
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
             Play();
             move.speed = 0;
-            
+
         }
     }
+
 }
