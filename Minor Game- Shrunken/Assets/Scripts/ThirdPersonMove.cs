@@ -11,6 +11,7 @@ public class ThirdPersonMove : MonoBehaviour
     public float jump;
     public float combo;
     public GameObject sword;
+    public GameObject fidgerspinner;
     public GameObject enemy;
     public GameObject lockon;
     public GameObject locktarget;
@@ -117,6 +118,55 @@ public class ThirdPersonMove : MonoBehaviour
                 animator.SetBool("Attack", false);
             }
         }
+
+
+        if(fidgerspinner.activeInHierarchy == true)
+        {
+            if (Input.GetButton("Fire2") && controller.isGrounded)
+            {
+                animator.SetBool("fly", true);
+                
+                
+                StartCoroutine(Fly());
+
+            }
+
+            else if (Input.GetButton("Fire2"))
+            {
+                controller.Move(Physics.gravity * -0.01f);
+                fidgerspinner.GetComponent<Animator>().SetBool("Spin", true);
+                fidgerspinner.GetComponent<MeshRenderer>().enabled = true;
+
+            }
+
+            else if (Input.GetButton("Fire1"))
+            {
+                if (controller.isGrounded)
+                {
+                    animator.SetBool("fly", false);
+                    fidgerspinner.GetComponent<Animator>().SetBool("Spin", false);
+                    StartCoroutine(Spinneroff());
+
+
+                }
+                controller.Move(Physics.gravity * 0.01f);
+            }
+
+            else
+            {
+                if (direction.magnitude >= 0.1f)
+                {
+                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                    float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, smoothTurn);
+                    transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                    Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                    controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
+                }
+            }
+        }
+        
     }
 
     IEnumerator Wait()
@@ -140,4 +190,18 @@ public class ThirdPersonMove : MonoBehaviour
         sword.SetActive(true);
     }
 
+    IEnumerator Fly()
+    {
+        yield return new WaitForSeconds(1.5f);
+        controller.Move(Physics.gravity * -0.01f);
+        fidgerspinner.GetComponent<MeshRenderer>().enabled = true;
+        fidgerspinner.GetComponent<Animator>().SetBool("Spin", true);
+    }
+
+    IEnumerator Spinneroff()
+    {
+        yield return new WaitForSeconds(1);
+        fidgerspinner.GetComponent<MeshRenderer>().enabled = false;
+
+    }
 }

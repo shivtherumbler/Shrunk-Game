@@ -12,6 +12,7 @@ public class AlmirahCutScene : MonoBehaviour
     public ThirdPersonMove move;
     public GameObject spider;
     public GameObject prevTrigger;
+    public GameObject nextTrigger;
     public AudioSource audioSource;
 
 
@@ -55,6 +56,7 @@ public class AlmirahCutScene : MonoBehaviour
             spider.GetComponentInChildren<BoxCollider>().enabled = true;
             spider.AddComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             prevTrigger.SetActive(false);
+            nextTrigger.GetComponent<BoxCollider>().isTrigger = true;
             Destroy(gameObject, 1f);
         }
 

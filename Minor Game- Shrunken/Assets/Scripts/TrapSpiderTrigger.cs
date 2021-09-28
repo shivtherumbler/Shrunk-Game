@@ -50,7 +50,7 @@ public class TrapSpiderTrigger : MonoBehaviour
             move.speed = 5;
             nextTrigger.SetActive(true);
             nextTrigger.GetComponent<SpiderTrapCutScene>().Play();
-            //gameObject.GetComponent<BoxCollider>().enabled = false;
+            gameObject.GetComponent<BoxCollider>().isTrigger = false;
             gameObject.GetComponent<MeshCollider>().enabled = false;
             Destroy(playableDirector, 0.2f);
         }

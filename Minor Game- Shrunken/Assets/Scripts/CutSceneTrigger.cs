@@ -42,8 +42,10 @@ public class CutSceneTrigger : MonoBehaviour
     {
         cams[1].SetActive(true);
         cams[0].SetActive(false);
-        
+        //companion.GetComponent<CompanionAI>().target = companion.GetComponent<CompanionAI>().objective[2];
+        companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "";
         playableDirector.Play();
+        
     }
 
     void OnEnable()

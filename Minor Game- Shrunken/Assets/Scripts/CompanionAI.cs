@@ -102,10 +102,10 @@ public class CompanionAI : MonoBehaviour
         {
             canvas[0].SetActive(false);
         }
-        if(target != objective[0])
+        //if(target == objective[1])
         {
-            canvas[1].GetComponentInChildren<Text>().text = "Follow Tammy";
-            canvas[1].SetActive(true);
+            //canvas[1].GetComponentInChildren<Text>().text = "Follow Tammy";
+            //canvas[1].SetActive(true);
         }
         
 
@@ -117,6 +117,8 @@ public class CompanionAI : MonoBehaviour
         {
             target = objective[1];
             canvas[0].SetActive(false);
+            canvas[1].GetComponentInChildren<Text>().text = "Follow Tammy";
+            canvas[1].SetActive(true);
         }
     }
 
