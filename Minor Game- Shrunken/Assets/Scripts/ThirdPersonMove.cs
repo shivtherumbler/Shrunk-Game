@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 public class ThirdPersonMove : MonoBehaviour
@@ -11,11 +12,15 @@ public class ThirdPersonMove : MonoBehaviour
     public float jump;
     public float combo;
     public GameObject sword;
-    public GameObject fidgerspinner;
+    public GameObject fidgetspinner;
     public GameObject enemy;
     public GameObject lockon;
     public GameObject locktarget;
     public AudioClip[] audioSources;
+    public Image stamina;
+    public Image health;
+    public GameObject companion;
+    public GameObject blood;
 
 
     public float speed = 5f;
@@ -39,7 +44,6 @@ public class ThirdPersonMove : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(h, 0f, v).normalized;
-
 
         if (controller.isGrounded)
         {
@@ -113,46 +117,73 @@ public class ThirdPersonMove : MonoBehaviour
                 StartCoroutine(SwordWait());
                 animator.SetFloat("Swordpose", combo);
             }
+            else if (Input.GetButton("Fire2") && controller.isGrounded)
+            {
+                animator.SetBool("block", true);
+                
+            }
             else
             {
                 animator.SetBool("Attack", false);
+                animator.SetBool("block", false);
             }
         }
 
 
-        if(fidgerspinner.activeInHierarchy == true)
+        if(fidgetspinner.activeInHierarchy == true)
         {
-            if (Input.GetButton("Fire2") && controller.isGrounded)
+            
+
+            if (stamina.fillAmount > 0.1)
             {
-                animator.SetBool("fly", true);
-                
-                
-                StartCoroutine(Fly());
-
-            }
-
-            else if (Input.GetButton("Fire2"))
-            {
-                controller.Move(Physics.gravity * -0.01f);
-                fidgerspinner.GetComponent<Animator>().SetBool("Spin", true);
-                fidgerspinner.GetComponent<MeshRenderer>().enabled = true;
-
-            }
-
-            else if (Input.GetButton("Fire1"))
-            {
-                if (controller.isGrounded)
+                if (Input.GetButton("Fire2") && controller.isGrounded)
                 {
-                    animator.SetBool("fly", false);
-                    fidgerspinner.GetComponent<Animator>().SetBool("Spin", false);
-                    StartCoroutine(Spinneroff());
+                    animator.SetBool("fly", true);
 
+                    
+                    StartCoroutine(Fly());
 
                 }
-                controller.Move(Physics.gravity * 0.01f);
-            }
 
-            else
+                else if (Input.GetButton("Fire2"))
+                {
+                    controller.Move(Physics.gravity * -0.01f);
+                    //fidgetspinner.GetComponent<Animator>().SetBool("Spin", true);
+                    fidgetspinner.GetComponent<Invector.vRotateObject>().enabled = true;
+                    fidgetspinner.GetComponent<MeshRenderer>().enabled = true;
+                    stamina.fillAmount -= 0.5f * Time.deltaTime;
+                }
+                else if (Input.GetButton("Fire1"))
+                {
+                    if (controller.isGrounded)
+                    {
+                        animator.SetBool("fly", false);
+                        //fidgetspinner.GetComponent<Animator>().SetBool("Spin", false);
+                        fidgetspinner.GetComponent<Invector.vRotateObject>().enabled = false;
+
+                        StartCoroutine(Spinneroff());
+
+
+                    }
+                    controller.Move(Physics.gravity * 0.01f);
+                    stamina.fillAmount += 0.3f * Time.deltaTime;
+                }
+                else
+                {
+                    if (direction.magnitude >= 0.1f)
+                    {
+                        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, smoothTurn);
+                        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                        Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                        controller.Move(moveDir.normalized * speed * Time.deltaTime);
+
+                    }
+                    stamina.fillAmount += 0.3f * Time.deltaTime;
+                }
+            }
+            else if(stamina.fillAmount <= 0.1f && stamina.fillAmount > 0f)
             {
                 if (direction.magnitude >= 0.1f)
                 {
@@ -161,17 +192,45 @@ public class ThirdPersonMove : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                     Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                    controller.Move(moveDir.normalized * speed * Time.deltaTime);
+                    controller.Move(moveDir.normalized * 0 * Time.deltaTime);
 
                 }
+                stamina.fillAmount -= 0.1f * Time.deltaTime;
             }
+            
+            else if(stamina.fillAmount == 0)
+            {
+                stamina.fillAmount += 0.11f;
+            }
+
+            
+        }
+
+        if(health.fillAmount == 0)
+        {
+            animator.SetBool("death", true);
+            animator.SetBool("Run", false);
+            h = 0;
+            v = 0;
+            speed = 0;
+            controller.Move(Vector3.zero);
+            
         }
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Health")
+        {
+            health.fillAmount = 1;
+            Destroy(other.gameObject, 0.1f);
+        }
+    }
+
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4f);
         animator.SetBool("Pickup", false);
         locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
         lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
@@ -194,14 +253,16 @@ public class ThirdPersonMove : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         controller.Move(Physics.gravity * -0.01f);
-        fidgerspinner.GetComponent<MeshRenderer>().enabled = true;
-        fidgerspinner.GetComponent<Animator>().SetBool("Spin", true);
+        fidgetspinner.GetComponent<MeshRenderer>().enabled = true;
+        //fidgetspinner.GetComponent<Animator>().SetBool("Spin", true);
+        fidgetspinner.GetComponent<Invector.vRotateObject>().enabled = true;
+
     }
 
     IEnumerator Spinneroff()
     {
         yield return new WaitForSeconds(1);
-        fidgerspinner.GetComponent<MeshRenderer>().enabled = false;
+        fidgetspinner.GetComponent<MeshRenderer>().enabled = false;
 
     }
 }

@@ -14,6 +14,7 @@ public class CutSceneTrigger : MonoBehaviour
     public GameObject sword;
     public GameObject lockon;
     public GameObject enemy;
+    public GameObject canvas;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class CutSceneTrigger : MonoBehaviour
             enemy.GetComponent<EnemyAI>().enabled = true;
             enemy.GetComponent<Animator>().SetBool("idle", false);
             companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pick up the Sword!";
+            canvas.SetActive(true);
             Destroy(gameObject, 0.2f);
         }
             

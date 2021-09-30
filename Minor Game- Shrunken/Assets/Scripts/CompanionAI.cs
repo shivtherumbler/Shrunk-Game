@@ -111,6 +111,19 @@ public class CompanionAI : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(objective[0].GetComponent<ThirdPersonMove>().controller.isGrounded == false)
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+           
+        }
+        else if(objective[0].GetComponent<ThirdPersonMove>().controller.isGrounded == true)
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        }
+    }
+
     public void Snif()
     {
         if(Input.GetKey(KeyCode.I))

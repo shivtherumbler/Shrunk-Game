@@ -84,6 +84,7 @@ public class SpiderAI : MonoBehaviour
         {
             animator.SetBool("reached", true);
             speed = 0;
+            
         }
         else if (range > 2.5)
         {
@@ -91,6 +92,32 @@ public class SpiderAI : MonoBehaviour
             speed = 300f;
         }
 
+       
+    }
 
+    private void Update()
+    {
+        if (range <= 2.5)
+        {
+            if (reached == true)
+            {
+                target.GetComponent<ThirdPersonMove>().health.fillAmount -= 0.1f * Time.deltaTime;
+                target.GetComponent<ThirdPersonMove>().blood.SetActive(true);
+                
+            }
+            else
+            {
+                target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
+               
+            }
+                
+        }
+        else if(range> 2.5)
+        {          
+            
+                target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
+                
+            
+        }
     }
 }

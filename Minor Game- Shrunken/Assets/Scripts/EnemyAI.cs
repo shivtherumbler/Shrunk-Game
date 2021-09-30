@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
@@ -10,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     public float nextWaypointDistance = 3f;
     public Animator animator;
     public float range;
+    public Image healthbar;
+    public GameObject blood;
 
     Path path;
     int currentWaypoint = 0;
@@ -92,6 +95,41 @@ public class EnemyAI : MonoBehaviour
             //animator.SetBool("attack", false);
         }
 
+    }
+
+    private void Update()
+    {
+        if (range <= 2.5)
+        {
+            if (reached == true && target.GetComponent<ThirdPersonMove>().animator.GetBool("block") == false)
+            {
+                target.GetComponent<ThirdPersonMove>().health.fillAmount -= 0.1f * Time.deltaTime;
+                target.GetComponent<ThirdPersonMove>().blood.SetActive(true);
+            }
+            else
+            {
+                target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
+                blood.SetActive(false);
+            }
+
+        }
+        else if (range > 2.5)
+        {
+
+            target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
+            blood.SetActive(false);
+
+        }
+
+        if (target.GetComponent<ThirdPersonMove>().controller.isGrounded == false)
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            
+        }
+        else if(target.GetComponent<ThirdPersonMove>().controller.isGrounded == true)
+        {
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        }
     }
 
 }
