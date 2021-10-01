@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundEffects : MonoBehaviour
 {
     public AudioClip[] audioClips;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -34,4 +34,5 @@ public class SoundEffects : MonoBehaviour
         audioSource.clip = audioClips[2];
         audioSource.Play();
     }
+
 }

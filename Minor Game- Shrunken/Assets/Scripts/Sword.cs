@@ -28,7 +28,7 @@ public class Sword : Interactable
 
     public void Pickup()
     {
-        pick.animator.SetBool("Pickup", true);
+        pick.animator.SetBool("PickupSword", true);
         //transform.parent = rightHand.transform;
         //sword.SetActive(true);
         isCollected = true;

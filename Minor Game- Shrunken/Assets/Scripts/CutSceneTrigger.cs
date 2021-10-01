@@ -35,7 +35,7 @@ public class CutSceneTrigger : MonoBehaviour
             Play();
             move.speed = 0;
             //companion.GetComponent<CompanionAI>().target = companion.GetComponent<CompanionAI>().objective[0];
-            lockon.GetComponent<CinemachineFreeLook>().m_LookAt = sword.transform;
+            //lockon.GetComponent<CinemachineFreeLook>().m_LookAt = sword.transform;
         }
     }
 

@@ -20,12 +20,25 @@ public class EnemyDamage : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            if(Input.GetButton("Fire1"))
+            //if(Input.GetButton("Fire1"))
+            //{
+                other.GetComponent<EnemyAI>().healthbar.fillAmount -= 5f * Time.deltaTime;
+                other.GetComponent<EnemyAI>().blood.SetActive(true);
+            //}
+
+        }
+    }
+
+    /*private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            if (Input.GetButton("Fire1"))
             {
                 other.GetComponent<EnemyAI>().healthbar.fillAmount -= 5f * Time.deltaTime;
                 other.GetComponent<EnemyAI>().blood.SetActive(true);
             }
-
         }
-    }
+    }*/
+
 }

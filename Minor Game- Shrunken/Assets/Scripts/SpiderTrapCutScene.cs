@@ -12,6 +12,7 @@ public class SpiderTrapCutScene : MonoBehaviour
     public ThirdPersonMove move;
     public GameObject nextTrigger;
     public AudioSource audioSource;
+    public GameObject spider;
 
 
     // Start is called before the first frame update
@@ -51,6 +52,7 @@ public class SpiderTrapCutScene : MonoBehaviour
             nextTrigger.SetActive(true);
             audioSource.clip = move.audioSources[3];
             audioSource.Play();
+            Destroy(spider);
             Destroy(gameObject, 0.2f);
         }
 

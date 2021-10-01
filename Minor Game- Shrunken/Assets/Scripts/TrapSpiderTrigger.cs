@@ -52,7 +52,7 @@ public class TrapSpiderTrigger : MonoBehaviour
             nextTrigger.GetComponent<SpiderTrapCutScene>().Play();
             gameObject.GetComponent<BoxCollider>().isTrigger = false;
             gameObject.GetComponent<MeshCollider>().enabled = false;
-            Destroy(spider);
+            //Destroy(spider);
             Destroy(playableDirector, 0.2f);
         }
 

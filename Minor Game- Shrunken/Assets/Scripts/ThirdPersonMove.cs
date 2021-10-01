@@ -21,7 +21,8 @@ public class ThirdPersonMove : MonoBehaviour
     public Image health;
     public GameObject companion;
     public GameObject blood;
-
+    public bool weapons;
+    public GameObject key;
 
     public float speed = 5f;
 
@@ -110,7 +111,7 @@ public class ThirdPersonMove : MonoBehaviour
 
         if(sword.activeInHierarchy == true)
         {
-            StartCoroutine(Wait());
+            StartCoroutine(Sword());
             if (Input.GetButtonDown("Fire1") && controller.isGrounded)
             {
                 animator.SetBool("Attack", true);
@@ -132,8 +133,8 @@ public class ThirdPersonMove : MonoBehaviour
 
         if(fidgetspinner.activeInHierarchy == true)
         {
-            
 
+            StartCoroutine(Spinner());
             if (stamina.fillAmount > 0.1)
             {
                 if (Input.GetButton("Fire2") && controller.isGrounded)
@@ -216,7 +217,26 @@ public class ThirdPersonMove : MonoBehaviour
             controller.Move(Vector3.zero);
             
         }
+
+        if(weapons == true)
+        {
+            if(Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Keypad1))
+            {
+                sword.SetActive(true);
+                fidgetspinner.SetActive(false);
+            }
+            else if(Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Keypad2))
+            {
+                fidgetspinner.SetActive(true);
+                sword.SetActive(false);
+            }
+        }
         
+        if(enemy.GetComponent<Animator>().GetBool("death") == true)
+        {
+            companion.GetComponent<CompanionAI>().canvas[1].SetActive(true);
+            companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pull the lever!";
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -228,13 +248,34 @@ public class ThirdPersonMove : MonoBehaviour
         }
     }
 
-    IEnumerator Wait()
+    IEnumerator Sword()
     {
         yield return new WaitForSeconds(4f);
-        animator.SetBool("Pickup", false);
-        locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
-        lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
-        lockon.GetComponent<CinemachineTargetGroup>().m_Targets[1] = (new CinemachineTargetGroup.Target {target = enemy.transform, radius = 1f, weight = 1f });
+        animator.SetBool("PickupSword", false);
+        //locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[1] = (new CinemachineTargetGroup.Target {target = enemy.transform, radius = 1f, weight = 1f });
+
+    }
+
+    IEnumerator Spinner()
+    {
+        yield return new WaitForSeconds(4f);
+        animator.SetBool("PickupSpinner", false);
+        //locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[1] = (new CinemachineTargetGroup.Target {target = enemy.transform, radius = 1f, weight = 1f });
+
+    }
+
+    IEnumerator Key()
+    {
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("PickupKey", false);
+        key.SetActive(false);
+        //locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
+        //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[1] = (new CinemachineTargetGroup.Target {target = enemy.transform, radius = 1f, weight = 1f });
 
     }
 
@@ -244,9 +285,21 @@ public class ThirdPersonMove : MonoBehaviour
         combo = (combo + 1) % 3;
     }
 
+    public void PickupKey()
+    {
+        StartCoroutine(Key());
+    }
+
     public void PickupSword()
     {
         sword.SetActive(true);
+    }
+
+    public void PickupSpinner()
+    {
+        fidgetspinner.SetActive(true);
+        sword.SetActive(false);
+        weapons = true;
     }
 
     IEnumerator Fly()
@@ -265,4 +318,5 @@ public class ThirdPersonMove : MonoBehaviour
         fidgetspinner.GetComponent<MeshRenderer>().enabled = false;
 
     }
+
 }

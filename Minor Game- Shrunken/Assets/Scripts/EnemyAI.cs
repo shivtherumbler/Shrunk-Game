@@ -12,7 +12,9 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     public float range;
     public Image healthbar;
+    public GameObject healthcanvas;
     public GameObject blood;
+    public GameObject nextTrigger;
 
     Path path;
     int currentWaypoint = 0;
@@ -72,12 +74,15 @@ public class EnemyAI : MonoBehaviour
         {
             currentWaypoint++;
         }
-
-        Quaternion lookOnLook =
+        if(animator.GetBool("death") == false)
+        {
+            Quaternion lookOnLook =
  Quaternion.LookRotation(target.transform.position - transform.position);
 
-        transform.rotation =
-        Quaternion.Slerp(transform.rotation, lookOnLook, 2f);
+            transform.rotation =
+            Quaternion.Slerp(transform.rotation, lookOnLook, 2f);
+        }
+        
         //transform.LookAt(target.position);
 
         range = Vector3.Distance(target.position, transform.position);
@@ -101,7 +106,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (range <= 2.5)
         {
-            if (reached == true && target.GetComponent<ThirdPersonMove>().animator.GetBool("block") == false)
+            if (reached == true && target.GetComponent<ThirdPersonMove>().animator.GetBool("block") == false && animator.GetBool("death") == false)
             {
                 target.GetComponent<ThirdPersonMove>().health.fillAmount -= 0.1f * Time.deltaTime;
                 target.GetComponent<ThirdPersonMove>().blood.SetActive(true);
@@ -121,7 +126,7 @@ public class EnemyAI : MonoBehaviour
 
         }
 
-        if (target.GetComponent<ThirdPersonMove>().controller.isGrounded == false)
+        if (target.GetComponent<ThirdPersonMove>().controller.isGrounded == false && target.GetComponent<ThirdPersonMove>().animator.GetBool("Run") == false)
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             
@@ -129,6 +134,18 @@ public class EnemyAI : MonoBehaviour
         else if(target.GetComponent<ThirdPersonMove>().controller.isGrounded == true)
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        }
+
+        if(healthbar.fillAmount == 0)
+        {
+            animator.SetBool("death", true);
+            speed = 0;
+            target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
+            blood.SetActive(false);
+            healthcanvas.SetActive(false);
+            nextTrigger.SetActive(true);
+            gameObject.GetComponent<EnemyAI>().enabled = false;
+           
         }
     }
 

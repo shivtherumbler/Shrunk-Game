@@ -113,7 +113,7 @@ public class CompanionAI : MonoBehaviour
 
     private void Update()
     {
-        if(objective[0].GetComponent<ThirdPersonMove>().controller.isGrounded == false)
+        if(objective[0].GetComponent<ThirdPersonMove>().controller.isGrounded == false && objective[0].GetComponent<ThirdPersonMove>().animator.GetBool("Run") == false)
         {
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
            
