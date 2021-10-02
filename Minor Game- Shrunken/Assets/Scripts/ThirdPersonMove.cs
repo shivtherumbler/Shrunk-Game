@@ -23,6 +23,9 @@ public class ThirdPersonMove : MonoBehaviour
     public GameObject blood;
     public bool weapons;
     public GameObject key;
+    public GameObject doortrigger;
+    public GameObject deathPanel;
+    public GameObject pausePanel;
 
     public float speed = 5f;
 
@@ -231,12 +234,12 @@ public class ThirdPersonMove : MonoBehaviour
                 sword.SetActive(false);
             }
         }
-        
-        if(enemy.GetComponent<Animator>().GetBool("death") == true)
+
+        if (deathPanel.activeInHierarchy)
         {
-            companion.GetComponent<CompanionAI>().canvas[1].SetActive(true);
-            companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pull the lever!";
+            pausePanel.SetActive(false);
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -260,7 +263,7 @@ public class ThirdPersonMove : MonoBehaviour
 
     IEnumerator Spinner()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         animator.SetBool("PickupSpinner", false);
         //locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
         //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
@@ -273,6 +276,7 @@ public class ThirdPersonMove : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         animator.SetBool("PickupKey", false);
         key.SetActive(false);
+        Destroy(doortrigger);
         //locktarget.GetComponent<CinemachineFreeLook>().m_LookAt = lockon.transform;
         //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[0] = (new CinemachineTargetGroup.Target { target = gameObject.transform, radius = 1f, weight = 1f });
         //lockon.GetComponent<CinemachineTargetGroup>().m_Targets[1] = (new CinemachineTargetGroup.Target {target = enemy.transform, radius = 1f, weight = 1f });
@@ -319,4 +323,17 @@ public class ThirdPersonMove : MonoBehaviour
 
     }
 
+    public void DeathPanel()
+    {
+        deathPanel.SetActive(true);
+        gameObject.GetComponent<AudioSource>().clip = audioSources[6];
+        gameObject.GetComponent<AudioSource>().Play();
+        Cursor.visible = true;
+    }
+
+    public void DeathSound()
+    {
+        gameObject.GetComponent<AudioSource>().clip = audioSources[7];
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 }

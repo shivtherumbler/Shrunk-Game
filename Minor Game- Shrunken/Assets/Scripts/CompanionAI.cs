@@ -95,8 +95,12 @@ public class CompanionAI : MonoBehaviour
 
         if(range <=2)
         {
-            Snif();
-            canvas[0].SetActive(true);
+            if(target == objective[0])
+            {
+                Snif();
+                canvas[0].SetActive(true);
+            }
+            
         }
         else
         {

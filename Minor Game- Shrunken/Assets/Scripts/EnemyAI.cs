@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject healthcanvas;
     public GameObject blood;
     public GameObject nextTrigger;
+    public GameObject companion;
 
     Path path;
     int currentWaypoint = 0;
@@ -141,12 +142,18 @@ public class EnemyAI : MonoBehaviour
             animator.SetBool("death", true);
             speed = 0;
             target.GetComponent<ThirdPersonMove>().blood.SetActive(false);
-            blood.SetActive(false);
+            Destroy(blood);
             healthcanvas.SetActive(false);
             nextTrigger.SetActive(true);
             gameObject.GetComponent<EnemyAI>().enabled = false;
            
         }
+    }
+
+    public void TextChange()
+    {
+        companion.GetComponent<CompanionAI>().canvas[1].SetActive(true);
+        companion.GetComponent<CompanionAI>().canvas[1].GetComponentInChildren<Text>().text = "Pull the lever!";
     }
 
 }
